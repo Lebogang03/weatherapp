@@ -1,0 +1,78 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>
+            <h1>MY WEATHER</h1>
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="body">
+
+
+    <ion-searchbar class="center" showCancelButton="focus" color="primary-shade" cancelButtonText="Cancel" [(ngModel)]="city"></ion-searchbar>
+    <ion-button class="search" expand="full" (click)="getData()">Search</ion-button>
+
+
+
+    <div class="center">
+
+        <h1>{{name}}</h1>
+        <br>
+        <img src="http://openweathermap.org/img/w/{{value?.list[0].weather[0].icon}}.png" class="image">
+        <h2><b>{{value?.list[0].main.temp}}&deg;C</b> </h2>
+        <h5><b> {{value?.list[0].dt_txt  | date:'EEEE'}}</b></h5>
+
+        <h5><b> {{value?.list[0].dt}}</b></h5>
+        <h5><b>{{value?.list[0].weather[0].description}}</b> </h5>
+        <h5><b>{{value?.list[0].wind.speed}}</b> </h5>
+
+    </div>
+
+    <br>
+
+    <table class="table">
+        <tr>
+            <th>
+                <img src="http://openweathermap.org/img/w/{{value?.list[0].weather[0].icon}}.png" class="image">
+                <br> {{value?.list[0].main.temp}}&deg;
+                <br> {{value?.list[0].dt_txt | date:'EE'}}
+
+            </th>
+
+            <th>
+                <img src="http://openweathermap.org/img/w/{{value?.list[1].weather[0].icon}}.png" class="image">
+                <br>{{value?.list[1].main.temp}}&deg;
+                <br> {{value?.list[1].dt_txt| date:'EE'}}
+
+            </th>
+            <th>
+                <img src="http://openweathermap.org/img/w/{{value?.list[2].weather[0].icon}}.png" class="image">
+                <br>{{value?.list[2].main.temp}}&deg;
+                <br>{{value?.list[2].dt_txt | date:'EE'}}
+
+            </th>
+
+            <th>
+                <img src="http://openweathermap.org/img/w/{{value?.list[3].weather[0].icon}}.png" class="image">
+                <br>{{value?.list[3].main.temp}}&deg;
+                <br>{{value?.list[3].dt_txt | date:'EE'}}
+
+            </th>
+
+            <th>
+                <img src="http://openweathermap.org/img/w/{{value?.list[3].weather[0].icon}}.png" class="image">
+                <br>{{value?.list[4].main.temp}}&deg;
+                <br>{{value?.list[4].dt_txt | date:'EE'}}
+
+            </th>
+
+
+
+
+
+
+        </tr>
+    </table>
+
+
+</ion-content>

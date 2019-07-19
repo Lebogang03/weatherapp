@@ -1,0 +1,45 @@
+.body {
+    --background: url("/assets/CITY.jpg") 0 0/100% 100% no-repeat;
+    height: 100%;
+}
+
+.center {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.image {
+    left: 0%;
+    right: 30%;
+    width: 50;
+}
+
+.table {
+    bottom: 0%;
+    top: 60%;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    color: white;
+    height: 40%
+}
+
+//th,
+//td {
+//padding: 8px;
+// background-color: #7aceda;
+//}
+td,
+th {
+    border: 0px solid #45c2f367;
+    text-align: center;
+    padding: 8px;
+}
+
+th:nth-child(even) {
+    background-color: #45c2f367;
+}
